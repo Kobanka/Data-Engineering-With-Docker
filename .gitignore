@@ -1,0 +1,22 @@
+# Virtual environments
+engie-env/
+.venv/
+
+# Training data (DO NOT version datasets)
+training/data/
+data/
+
+# Large files
+*.csv
+*.parquet
+*.h5
+*.pt
+*.pkl
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Logs
+logs/
+

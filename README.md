@@ -78,18 +78,18 @@ The inference container loads them from /models (set via MODELS_DIR).
 
 Training:
 
-  /home/aniss/repos/engie-data-engineering-with-docker/engie-env/bin/python training/train.py
+  engie-data-engineering-with-docker/engie-env/bin/python training/train.py
 
 Inference:
 
   cd inference/api
-  /home/aniss/repos/engie-data-engineering-with-docker/engie-env/bin/python -m uvicorn main:app --host 0.0.0.0 --port 8000
+  engie-data-engineering-with-docker/engie-env/bin/python -m uvicorn main:app --host 0.0.0.0 --port 8000
 
 ## Tests
 
 Run API tests:
 
-  /home/aniss/repos/engie-data-engineering-with-docker/engie-env/bin/python -m pytest -q inference/api/tests
+  engie-data-engineering-with-docker/engie-env/bin/python -m pytest -q inference/api/tests
 
 ## Configuration
 

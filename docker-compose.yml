@@ -1,0 +1,26 @@
+services:
+  training:
+    build:
+      context: ./training
+    image: engie-training:latest
+    container_name: training-container 
+    volumes:
+      - ./training/data:/workspace/data:ro
+      - models:/models
+
+  inference:
+    build:
+      context: ./inference
+    image: engie-inference:latest
+    container_name: inference-container 
+    depends_on:
+      - training
+    environment:
+      MODELS_DIR: /models
+    volumes:
+      - models:/models
+    ports:
+      - "8000:8000"
+
+volumes:
+  models:
