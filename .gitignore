@@ -2,9 +2,11 @@
 engie-env/
 .venv/
 
-# Training data (DO NOT version datasets)
-training/data/
-data/
+# Ignore training datasets
+training/data/*
+# Keep placeholder file
+!training/data/.gitkeep
+
 
 # Large files
 *.csv
